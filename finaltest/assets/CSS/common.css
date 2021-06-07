@@ -1,0 +1,495 @@
+/* Header */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #212112;
+    background-image: url("/assets/image/freshbgc.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 30%;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: all 200ms linear;
+  }
+  ::selection {
+    color: #fff;
+    background-color: #8167a9;
+  }
+  ::-moz-selection {
+    color: #fff;
+    background-color: #8167a9;
+  }
+  
+  /* #Navigation */
+  
+  .start-header {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 10px 0;   /*-----------------------------------------------*/
+    box-shadow: 0 10px 10px rgba(117, 111, 111, 0.438);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .start-header.scroll-on {
+    box-shadow: 0 5px 10px 0 rgba(132, 133, 134, 0.808);
+    padding: 10px 0;    /*-----------------------------------------------*/
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+}
+  .start-header.scroll-on .navbar-brand img {
+    height: 24px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    
+  }
+  .navigation-wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .navbar {
+    padding: 0;
+    width:115%;  /*跟上面user有關*/
+  }
+  .navbar-brand img {
+    height:100px;  /*----------注意-------*/
+    width: auto;
+    display: block;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .navbar-toggler {
+    float: right;
+    border: none;
+    padding-right: 0;
+  }
+  .navbar-toggler:active,
+  .navbar-toggler:focus {
+    outline: none;
+  }
+  
+  .nav-link {
+    color: #212121 !important;
+    font-weight: 500;
+    transition: all 200ms linear;
+  }
+  .nav-item:hover .nav-link {
+    color: #8167a9 !important;
+  }
+  .nav-item.active .nav-link {
+    color: #777 !important;
+  }
+  .nav-link {
+    position: relative;
+    padding: 10px 0 !important;
+    display: inline-block;
+  }
+  .nav-item:after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #8167a9;
+    opacity: 0;
+    transition: all 200ms linear;
+  }
+  .nav-item:hover:after {
+    bottom: 0;
+    opacity: 1;
+  }
+  .nav-item.active:hover:after {
+    opacity: 0;
+  }
+  .nav-item {
+    position: relative;
+    transition: all 200ms linear;
+  }
+  
+  /* #Primary style
+  ================================================== */
+  
+  .bg-light {
+    background-color: #fff !important;
+    transition: all 200ms linear;
+  }
+  .section {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .full-height {
+    height: 100vh;
+  }
+  .over-hide {
+    overflow: hidden;
+  }
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: 40px;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+  
+  .nav-item .dropdown-menu {
+    transform: translate3d(0, 10px, 0);
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    transition: all 200ms linear;
+  }
+  .nav-item.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 999px;
+    transform: translate3d(0, 0px, 0);
+  }
+  .dropdown-menu {
+    padding: 10px !important;
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #212121;
+    background-color: #fcfaff;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    transition: all 200ms linear;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .dropdown-item {
+    padding: 3px 15px;
+    color: #212121;
+    border-radius: 2px;
+    transition: all 200ms linear;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: #fff;
+    background-color: rgba(129, 103, 169, 0.6);
+  }
+  
+  
+  /* #Media */
+  
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 38px;
+    }
+    .nav-item:after {
+      display: none;
+    }
+    .nav-item::before {
+      position: absolute;
+      display: block;
+      top: 15px;
+      left: 0;
+      width: 11px;
+      height: 1px;
+      content: "";
+      border: none;
+      background-color: #000;
+      vertical-align: 0;
+    }
+    .dropdown-toggle::after {
+      position: absolute;
+      display: block;
+      top: 10px;
+      left: -23px;
+      width: 1px;
+      height: 11px;
+      content: "";
+      border: none;
+      background-color: #000;
+      vertical-align: 0;
+      transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"]::after {
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+    .dropdown-menu {
+      padding: 0 !important;
+      background-color: transparent;
+      box-shadow: none;
+      transition: all 200ms linear;
+    }
+    .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+      margin-top: 10px !important;
+      margin-bottom: 20px !important;
+    }
+    body.dark .nav-item::before {
+      background-color: #fff;
+    }
+    body.dark .dropdown-toggle::after {
+      background-color: #fff;
+    }
+    body.dark .dropdown-menu {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  
+  /* #Link to page */
+.logo{
+  position: relative;
+  left: -10px;
+  -webkit-filter:drop-shadow(5px 5px 10px rgba(80, 80, 80, 0.589)) ;
+}
+
+  .user{
+    position: relative;
+    left: 50px; /*---配合navbar-----*/
+    height: 35px;
+  }
+  .user img{
+      height: 100%;
+      padding-left: 10px;
+      position: relative;
+      top: -3px;
+  }
+  .user a{
+    margin-left: 10px;
+    font-size:17px;
+    letter-spacing: 0.4px;
+  }
+  .user .bag{
+    height: 33px;
+  }
+  .man:hover,.bag:hover{
+    transition:0.3s;
+    transform:scale(1.2);
+  }
+
+  /* login彈跳視窗 */
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .overlay.light {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .overlay .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+  }
+  
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 75px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #666;
+    width: 300px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  .light .popup {
+    border-color: #aaa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #666;
+    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+  }
+  
+  .popup .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #666;
+  }
+  
+  .popup .close:hover {
+    opacity: 1;
+  }
+  
+  .popup .logincontent {
+    max-height: 400px;
+    overflow: auto;
+  }
+  
+  .popup .logincontent p {
+    margin: 0 0 1em;
+  }
+  
+  .popup .logincontent p:last-child {
+    margin: 0;
+  }
+  /* login彈跳視窗End */
+  /* -----------------------Header End-------------------------- */
+
+  .containerr{
+    height: 10000px;
+    z-index: 1;
+    margin-top: 130px;
+  }
+
+  .bg1{
+    height: 500px;
+    width: 100%;
+    background: url("/assets/image/1prism.png");
+  }
+
+
+  /*---------------圖片輪播--------------------*/
+  .full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .carousel-inner{
+    height: 800px;
+  }
+
+
+
+
+/*------唱片輪播--------*/
+
+
+  
+  #carousel {
+    position: relative;
+    height: 420px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+  
+  #carousel div {
+    position: absolute;
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+    opacity: 1;
+  }
+  
+  #carousel div img {
+    width: 390px;
+    transition: width 1s;
+  }
+  
+  #carousel div.hideLeft {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+  
+  #carousel div.hideLeft img {
+    width: 200px;
+  }
+  
+  #carousel div.hideRight {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+  
+  #carousel div.hideRight img {
+    width: 200px;
+  }
+  
+  #carousel div.prev {
+    z-index: 5;
+    left: 30%;
+    transform: translateY(50px) translateX(-50%);
+  }
+  
+  #carousel div.prev img {
+    width: 300px;
+  }
+  
+  #carousel div.prevLeftSecond {
+    z-index: 4;
+    left: 15%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: 0.7;
+  }
+  
+  #carousel div.prevLeftSecond img {
+    width: 200px;
+  }
+  
+  #carousel div.selected {
+    z-index: 10;
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+  }
+  
+  #carousel div.next {
+    z-index: 5;
+    left: 70%;
+    transform: translateY(50px) translateX(-50%);
+  }
+  
+  #carousel div.next img {
+    width: 300px;
+  }
+  
+  #carousel div.nextRightSecond {
+    z-index: 4;
+    left: 85%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: 0.7;
+  }
+  
+  #carousel div.nextRightSecond img {
+    width: 200px;
+  }
+  
+  .buttons {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+  }
+
+
+
+
+
+  
